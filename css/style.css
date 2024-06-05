@@ -2120,4 +2120,54 @@ span.error {
   margin-bottom: 10px;
 }
 
+/*SRC*/
+#imageContainer {
+  position: fixed;
+  top: 60px;
+  left: 60px;
+  z-index: 9; 
+}
+
+#desktopImage {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; 
+}
+
+#mobileImage {
+  margin-top: 200px;
+  max-width: 80%;
+  max-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; 
+}
+
+
+/* Hide images initially */
+#desktopImage.show, #mobileImage.show {
+  opacity: 1;
+}
+
+/* Media query for desktop */
+@media only screen and (min-width: 768px) {
+  #desktopImage {
+      display: block;
+
+  }
+  #mobileImage {
+      display: none;
+  }
+}
+
+/* Media query for mobile */
+@media only screen and (max-width: 767px) {
+  #desktopImage {
+      display: none;
+  }
+  #mobileImage {
+      display: block;
+  }
+}
+
 
