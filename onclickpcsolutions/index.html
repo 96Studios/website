@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick PC Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    
+    <!-- Header Section -->
+    <div class="header">
+        <!-- Reduced size logo -->
+        <img src="./images/logo.png" alt="" class="logo">
+        <div class="hamburger-menu" onclick="toggleMenu(event)">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        
+        
+        <div class="services-links">
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Windows</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="openMicrosoftModal()">Installation</a>
+                </div>
+            </div>
+
+            <div class="modal fade" id="windowsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Installation for Windows Installation</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form name="submit-to-google-sheet" id="installationForm">
+                                <!-- Add installation details content here -->
+                                <p name="installation" >Windows Installation</p>
+                                <p style="font-size: 2em; margin-top: -10px;" name="price"><strong>R299.<span style="font-size: 0.5em; vertical-align: super;">99</span></strong></p>
+                                <input type="hidden" id="installationText" name="installation" value="Windows">
+                                <input type="hidden" id="priceText" name="price" value="R300.00">
+                                <!-- Email field -->
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required pattern="[0-9]+" title="Please enter only numbers">
+                                </div>
+                                
+                                <!-- Additional Installation checkbox -->
+                                <div class="form-check">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <label class="form-check-label" for="additionalInstallation">Full Installation R419.<span style="font-size: 0.5em; vertical-align: super;">99</span></label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="checkbox" class="form-check-input" id="additionalInstallation" name="additionalInstallation">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Request button -->
+                                <button type="submit" class="btn btn-primary">Request</button>
+                                <span id="msg" class="msg"></span>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Microsoft Office</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="openAntivirusModal()">Installation</a>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="microsoftModal" tabindex="-1" role="dialog" aria-labelledby="microsoftModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="microsoftModalLabel">Installation for Microsoft Office</h5>                            
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <form name="submit-to-google-sheet" id="installationForm">
+                                <!-- Add installation details content here -->
+                                <p name="installation">Microsoft Office Installation</p>
+                                <p style="font-size: 2em; margin-top: -10px;" name="price"><strong>R149.<span style="font-size: 0.5em; vertical-align: super;">99</span></strong></p>
+                                <input type="hidden" id="installationText" name="installation" value="Microsoft">
+                                <input type="hidden" id="priceText" name="price" value="R150.00">
+                                <!-- Email field -->
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <!-- Phone field -->
+                                <div class="form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required pattern="[0-9]+" title="Please enter only numbers">
+                                </div>
+                                <!-- Additional Installation checkbox -->
+                                <div class="form-check">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <label class="form-check-label" for="additionalInstallation">Full Installation R419.<span style="font-size: 0.5em; vertical-align: super;">99</span></label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="checkbox" class="form-check-input" id="additionalInstallation" name="additionalInstallation">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Request button -->
+                                <button type="submit" class="btn btn-primary">Request</button>
+                                <span id="msg" class="msg"></span>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    
+
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Antivirus</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="openInstallationModal()">Installation</a>
+                </div>
+            </div>
+            
+
+
+            <div class="modal fade" id="antivirusModal" tabindex="-1" role="dialog" aria-labelledby="antivirusModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="antivirusModalLabel">Installation for Antivirus</h5>                              
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form name="submit-to-google-sheet" id="installationForm">
+                                <!-- Add installation details content here -->
+                                <p name="installation">Antivirus Installation</p>
+                                <p style="font-size: 2em; margin-top: -10px;" name="price"><strong>R99.<span style="font-size: 0.5em; vertical-align: super;">99</span></strong></p>
+                                <input type="hidden" id="installationText" name="installation" value="Antivirus">
+                                <input type="hidden" id="priceText" name="price" value="R100.00">
+                                <!-- Email field -->
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <!-- Phone field -->
+                                <div class="form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required pattern="[0-9]+" title="Please enter only numbers">
+                                </div>
+                                <!-- Additional Installation checkbox -->
+                                <div class="form-check">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <label class="form-check-label" for="additionalInstallation">Full Installation R419.<span style="font-size: 0.5em; vertical-align: super;">99</span></label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="checkbox" class="form-check-input" id="additionalInstallation" name="additionalInstallation">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Request button -->
+                                <button type="submit" class="btn btn-primary">Request</button>
+                                <span id="msg" class="msg"></span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Adobe Reader</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="openAdobeReaderModal()">Installation</a>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="adobeReaderModal" tabindex="-1" role="dialog" aria-labelledby="adobeReaderModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="adobeReaderModalLabel">Installation for Adobe Reader</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form name="submit-to-google-sheet" id="installationForm">
+                                <!-- Add installation details content here -->
+                                <p name="installation">Adobe Reader Installation</p>
+                                <p style="font-size: 2em; margin-top: -10px;" name="price"><strong>R59.<span style="font-size: 0.5em; vertical-align: super;">99</span></strong></p>
+                                <input type="hidden" id="installationText" name="installation" value="Adobereader">
+                                <input type="hidden" id="priceText" name="price" value="R60.00">
+                                <!-- Email field -->
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <!-- Phone field -->
+                                <div class="form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required pattern="[0-9]+" title="Please enter only numbers">
+                                </div>
+                                <!-- Additional Installation checkbox -->
+                                <div class="form-check">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <label class="form-check-label" for="additionalInstallation">Full Installation R419.<span style="font-size: 0.5em; vertical-align: super;">99</span></label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="checkbox" class="form-check-input" id="additionalInstallation" name="additionalInstallation">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Request button -->
+                                <button type="submit" class="btn btn-primary">Request</button>
+                                <span id="msg" class="msg"></span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Deleted Files Recovery</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="openDeletedFilesModal()">Installation</a>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="deletedFilesModal" tabindex="-1" role="dialog" aria-labelledby="deletedFilesModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deletedFilesModalLabel">Installation for Deleted Files Recovery</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form name="submit-to-google-sheet" id="installationForm">
+                                <!-- Add installation details content here -->
+                                <p name="installation">Deleted Files Recovery</p>
+                                <p style="font-size: 2em; margin-top: -10px;" name="price"><strong>R299.<span style="font-size: 0.5em; vertical-align: super;">99</span></strong></p>
+                                <input type="hidden" id="installationText" name="installation" value="Deletedfilesrecovery">
+                                <input type="hidden" id="priceText" name="price" value="R300.00">
+                                <!-- Email field -->
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <!-- Phone field -->
+                                <div class="form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required pattern="[0-9]+" title="Please enter only numbers">
+                                </div>
+                                <!-- Additional Installation checkbox -->
+                                <div class="form-check">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <label class="form-check-label" for="additionalInstallation">Full Installation R419.<span style="font-size: 0.5em; vertical-align: super;">99</span></label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="checkbox" class="form-check-input" id="additionalInstallation" name="additionalInstallation">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Request button -->
+                                <button type="submit" class="btn btn-primary">Request</button>
+                                <span id="msg" class="msg"></span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Password Recovery</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="openPasswordRecoveryModal()">Installation</a>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="passwordRecoveryModal" tabindex="-1" role="dialog" aria-labelledby="passwordRecoveryModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="passwordRecoveryModalLabel">Installation for Password Recovery</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form name="submit-to-google-sheet" id="installationForm">
+                                <!-- Add installation details content here -->
+                                <p name="installation">Password Recovery</p>
+                                <p style="font-size: 2em; margin-top: -10px;" name="price"><strong>R499.<span style="font-size: 0.5em; vertical-align: super;">99</span></strong></p>
+                                <input type="hidden" id="installationText" name="installation" value="Passwordrecovery">
+                                <input type="hidden" id="priceText" name="price" value="R500.00">
+                                <!-- Email field -->
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <!-- Phone field -->
+                                <div class="form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required pattern="[0-9]+" title="Please enter only numbers">
+                                </div>
+                                <!-- Additional Installation checkbox -->
+                                <div class="form-check">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <label class="form-check-label" for="additionalInstallation">Full Installation R419.<span style="font-size: 0.5em; vertical-align: super;">99</span></label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="checkbox" class="form-check-input" id="additionalInstallation" name="additionalInstallation">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Request button -->
+                                <button type="submit" class="btn btn-primary">Request</button>
+                                <span id="msg" class="msg"></span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Printer Setup</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="openPrinterSetupModal()">Installation</a>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="printerSetupModal" tabindex="-1" role="dialog" aria-labelledby="printerSetupModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="printerSetupModalLabel">Installation for Printer Setup</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form name="submit-to-google-sheet" id="installationForm">
+                                <!-- Add installation details content here -->
+                                <p name="installation">Printer Setup Installation</p>
+                                <p style="font-size: 2em; margin-top: -10px;" name="price"><strong>R239.<span style="font-size: 0.5em; vertical-align: super;">99</span></strong></p>
+                                <input type="hidden" id="installationText" name="installation" value="Printersetup">
+                                <input type="hidden" id="priceText" name="price" value="R240.00">
+                                <!-- Email field -->
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <!-- Phone field -->
+                                <div class="form-group">
+                                    <label for="phone">Phone:</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required pattern="[0-9]+" title="Please enter only numbers">
+                                </div>
+                                <!-- Additional Installation checkbox -->
+                                <div class="form-check">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <label class="form-check-label" for="additionalInstallation">Full Installation R419.<span style="font-size: 0.5em; vertical-align: super;">99</span></label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="checkbox" class="form-check-input" id="additionalInstallation" name="additionalInstallation">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Request button -->
+                                <button type="submit" class="btn btn-primary">Request</button>
+                                <span id="msg" class="msg"></span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            
+        </div>
+      
+    </div>
+    
+    <!-- Main Section -->
+    <div class="main-section">
+        <div class="content-container">
+            <div class="text-button-container">
+                <h2 id="animate-h2">All solutions for your<br>Computer Problems!</h2>
+                <a href="https://onclicksolutions.github.io/Hardware/" class="hardware-button" id="animate-button">Hardware Repair</a>
+            </div>
+            <img src="images/001.png" srcset="images/001.png" alt="Computer Image" class="computer-image">
+        </div>
+    </div>
+
+
+    <!-- Rectangle Box -->
+    <div class="rectangle-box">
+        <!-- No content inside the rectangle box -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyMUMuefjUZlfBBXguumIdx_hMl9pi_a6OPBlEKfPc_m3vvXLEZDaodF8O2CVkq4FAF/exec';
+    
+        // Select all forms with the name "submit-to-google-sheet"
+        const forms = document.querySelectorAll('form[name="submit-to-google-sheet"]');
+    
+        // Loop through each form and attach event listener
+        forms.forEach(form => {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const msg = form.querySelector('.msg'); // Select the message element within the form
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = 'Your request sent!';
+                    setTimeout(function(){
+                        msg.innerHTML = '';
+                    }, 5000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+            });
+        });
+    </script>
+    
+    
+
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const h2Element = document.getElementById('animate-h2');
+    const buttonElement = document.getElementById('animate-button');
+
+    // Add a class to trigger animations after a delay
+    setTimeout(() => {
+        h2Element.style.opacity = '1';
+        h2Element.style.transform = 'translateY(0)';
+        buttonElement.style.opacity = '9';
+    }, 500); // Adjust delay as needed
+    });
+
+    </script>
+
+
+    <script>
+        // Function to open the Microsoft Office modal
+        function openMicrosoftModal() {
+            $('#windowsModal').modal('show');
+        }
+    </script>
+
+    <script>
+        function openAntivirusModal() {
+            $('#microsoftModal').modal('show');
+        }
+    </script>
+
+    <script>
+        function openInstallationModal() {
+            $('#antivirusModal').modal('show');
+        }
+    </script>
+
+    <script>
+        function openAdobeReaderModal() {
+            $('#adobeReaderModal').modal('show');
+        }
+    </script>
+
+    <script>
+        function openDeletedFilesModal() {
+            $('#deletedFilesModal').modal('show');
+        }
+    </script>
+
+    <script>
+        function openPasswordRecoveryModal() {
+            $('#passwordRecoveryModal').modal('show');
+        }
+    </script>
+
+    <script>
+        function openPrinterSetupModal() {
+            $('#printerSetupModal').modal('show');
+        }
+    </script>
+
+    <script>
+        function toggleMenu() {
+    var links = document.querySelector('.services-links');
+    if (links.style.display === 'none' || links.style.display === '') {
+        links.style.display = 'block';
+    } else {
+        links.style.display = 'none';
+    }
+}
+    </script>
+
+<script>
+    function toggleMenu(event) {
+        // Toggle hamburger menu animation
+        var menu = document.querySelector('.hamburger-menu');
+        menu.classList.toggle('active');
+
+        // Toggle visibility of services-links
+        var servicesLinks = document.querySelector('.services-links');
+        servicesLinks.classList.toggle('active');
+        
+        // Prevent click event from propagating
+        event.stopPropagation();
+    }
+</script>
+
+
+    </body>
+</html>

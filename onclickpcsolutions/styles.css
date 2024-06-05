@@ -1,0 +1,375 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%; /* Ensure full width */
+    max-width: 100%; /* Ensure full width */
+}
+
+
+.header {
+    background-color: #ffffff; /* Set background color to white */
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    margin-left: 80px;
+    max-height: 30px; /* Reduced height of the logo */
+    margin-top: 10px; /* Optional: Adjust the margin for vertical alignment */
+    float: left; /* Align the logo to the left */
+}
+
+.services-links {
+    margin-top: 10px;
+    padding-right: 80px;
+}
+
+.services-links a {
+    color: #000000; /* Set link color to black */
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.services-links .padding {
+    color: #000000; /* Set padding color to black */
+}
+
+.main-section {
+    padding: 50px;
+    color: #ffffff;
+    background: #d4d4d4; /* Pink gradient color */
+    border-radius: 10px;
+    margin-left: 50px; /* Adjust as needed */
+    margin-right: 50px; /* Adjust as needed */
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1); /* Add a drop shadow at the bottom */
+}
+
+
+
+.content-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Align items horizontally with space in between */
+    padding: 0 200px; /* Add padding to the left and right sides (increased by ten times) */
+}
+
+.services-links a:hover,
+.services-links .padding:hover {
+    color: #d4d4d4; /* Set hover color for links and spans */
+}
+
+
+.computer-image {
+    max-width: 40%; /* Limit the image width to 20% of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.text-button-container {
+    flex: 1; /* Grow to fill available space */
+}
+
+.hardware-button {
+    background-color: #e7283b; /* Green color, change as needed */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#animate-button:hover {
+    text-decoration: none; /* Remove underline on hover */
+    background-color: white !important; /* Change background color to white on hover */
+    color: black !important; /* Change text color to black on hover */
+}
+
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of links on hover */
+.dropdown-content a:hover {
+    background-color: #d4d4d4;
+}
+
+/* Style the padding */
+.padding {
+    color: #000000; /* Set padding color to black */
+}
+
+/* Show padding on hover */
+.padding:hover {
+    background-color: #d4d4d4;
+}
+
+.modal-body p {
+    text-align: left;
+}
+.modal-body label {
+    text-align: left;
+    display: block; /* Ensure labels are displayed as block elements */
+}
+.modal-body button[type="submit"] {
+    margin-top: 20px;
+}
+
+.input-error {
+    border: 2px solid red; /* Change the border color to red for error */
+}
+.hardware-button {
+    margin-top: 20px;
+    margin-left: 15px;
+    border-radius: 40px;
+}
+
+#animate-h2 {
+    opacity: 0;
+    transform: translateY(50px); /* Start position below the viewport */
+    transition: opacity 1s, transform 1s;
+}
+
+#animate-button {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.msg {
+    color: green; /* Set text color to green */
+    font-weight: bold; /* Make text bold */
+    display: block; /* Ensure it displays as a block element */
+    margin-top: 20px; /* Add some space between the button and the message */
+}
+
+
+/* For tablets */
+@media (max-width: 820px) {
+    .header {
+        padding: 10px; /* Reduce header padding */
+    }
+
+    .logo {
+        margin-left: 20px; /* Reduce margin for the logo */
+        max-height: 20px; /* Reduce logo size */
+    }
+
+    .hamburger-menu {
+        display: none; /* Hide the hamburger menu */
+    }
+
+    .menu-toggle {
+        display: none; /* Hide the menu toggle button */
+    }
+
+    .services-links {
+        padding-top: 100px;
+        padding-bottom: 20px;
+        display: block; /* Show the services links */
+        padding-right: 20px; /* Adjust padding for services links */
+    }
+
+    .content-container {
+        padding: 0 20px; /* Reduce padding for main content */
+    }
+
+    .computer-image {
+        max-width: 40%; /* Adjust image size for tablets */
+    }
+
+    .hardware-button {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 14px; /* Reduce button font size */
+    }
+
+    .dropdown-content {
+        min-width: 140px; /* Adjust dropdown content width */
+    }
+    .logo {
+        margin-left: 40px;
+        max-height: 25px; /* Reduced height of the logo */
+        margin-top: 25px; /* Optional: Adjust the margin for vertical alignment */
+        float: left; /* Align the logo to the left */
+    }
+    #animate-h2 {
+        white-space: nowrap; /* Prevent wrapping of text */
+        font-size: 26px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .header {
+        padding: 5px; /* Further reduce header padding */
+    }
+
+    .logo {
+        max-height: 15px; /* Reduce logo size for mobile */
+    }
+
+    .services-links {
+        display: none; /* Hide services links on mobile */
+    }
+
+    .content-container {
+        padding: 0 10px; /* Reduce padding for main content */
+    }
+
+    .computer-image {
+        max-width: 80%; /* Adjust image size for mobile */
+    }
+
+    .hardware-button {
+        padding: 8px 16px; /* Further reduce button padding */
+        font-size: 12px; /* Reduce button font size */
+    }
+
+    .dropdown-content {
+        min-width: 120px; /* Further adjust dropdown content width */
+    }
+
+    /* Style for the hamburger menu */
+    .hamburger-menu {
+        display: block; /* Change to block to make it visible */
+        position: fixed;
+        top: 20px;
+        right: 20px; /* Adjust right positioning */
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    /* Style for individual bars of the hamburger icon */
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #000;
+        margin: 6px 0;
+        transition: 0.4s; /* Add transition for smooth animation */
+    }
+    
+    /* Rotate animation for the hamburger icon */
+    .change .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+    
+    .change .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .change .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+
+}
+/* For mobile phones */
+@media (max-width: 480px) {
+    .content-container {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .computer-image {
+        order: -1; /* Move the image above in the flex order */
+        margin-bottom: 20px; /* Add some space between image and text */
+    }
+
+    .text-button-container {
+        text-align: center; /* Center align text and button */
+    }
+
+    .main-section {
+        margin-top: 80px; /* Add margin-top to move it down */
+    }
+
+    #animate-h2 {
+        white-space: nowrap; /* Prevent wrapping of text */
+        font-size: 20px;
+    }
+    #animate-button{
+       margin-top: 40px;
+    }
+    .services-links {
+        padding: 0 10px; /* Equal left and right padding */
+        margin-top: 80px; /* Move content 80px down */
+        display: flex; /* Use flexbox */
+        justify-content: center; /* Center-align the content horizontally */
+        align-items: center; /* Center-align the content vertically */
+        flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    }
+
+    .dropdown {
+        padding-top: 10px;
+        flex-basis: calc(50% - 20px); /* Set width for each dropdown (50% - padding) */
+        text-align: center; /* Center-align the content */
+    }
+    .logo {
+        margin-left: 40px;
+        max-height: 25px; /* Reduced height of the logo */
+        margin-top: 25px; /* Optional: Adjust the margin for vertical alignment */
+        float: left; /* Align the logo to the left */
+    }
+    
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #000;
+        margin: 6px 0;
+        transition: transform 0.3s ease; /* Add transition for smooth animation */
+    }
+    
+    /* Class to rotate bars to form an X */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+    
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-6px, -6px);
+    }
+    .services-links {
+        /* Other styles */
+        display: none; /* Hide the services-links by default */
+    }
+    
+    .services-links.active {
+        display: flex; /* Show the services-links when active */
+    }
+
+}
