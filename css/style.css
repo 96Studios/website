@@ -2141,7 +2141,7 @@ span.error {
   max-height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 
