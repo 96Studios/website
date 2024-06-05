@@ -2137,8 +2137,7 @@ span.error {
 }
 
 #mobileImage {
-  margin-top: 200px;
-  max-width: 80%;
+  max-width: 90%;
   max-height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out; 
