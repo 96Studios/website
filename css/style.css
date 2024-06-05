@@ -2125,7 +2125,7 @@ span.error {
   position: fixed;
   top: 60px;
   left: 60px;
-  z-index: 9; 
+  z-index: 99;
 }
 
 #desktopImage {
@@ -2133,6 +2133,7 @@ span.error {
   max-height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out; 
+  margin-left: 230px;
 }
 
 #mobileImage {
