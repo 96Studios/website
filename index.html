@@ -1,48 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <style>
-#imageContainer {
-    position: fixed;
-    top: 60px;
-    left: 60px;
-    z-index: 9; 
-}
-
-#desktopImage, #mobileImage {
-    max-width: 100%;
-    max-height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out; 
-}
-
-/* Hide images initially */
-#desktopImage.show, #mobileImage.show {
-    opacity: 1;
-}
-
-/* Media query for desktop */
-@media only screen and (min-width: 768px) {
-    #desktopImage {
-        display: block;
-        padding-left: 230px;
-    }
-    #mobileImage {
-        display: none;
-    }
-}
-
-/* Media query for mobile */
-@media only screen and (max-width: 767px) {
-    #desktopImage {
-        display: none;
-    }
-    #mobileImage {
-        display: block;
-    }
-}
-
-</style>
-  <head>
+<head>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-52J7HW8WCP"></script>
 <script>
@@ -836,6 +794,6 @@ if (!getCookie('imagesShown')) {
 }
 
 </script>
-
-  </body>
+<script src="script.js"></script>
+</body>
 </html>
